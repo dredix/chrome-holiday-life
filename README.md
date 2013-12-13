@@ -1,7 +1,7 @@
 Game of Life for Holiday Chrome
 =============================
 
-This Chrome app builds up the holiday-chrome code base http://github.com/moorescloud/holiday-chrome, and implements
+This Chrome app builds up the holiday-chrome code base http://github.com/moorescloud/chrome-holiday, and implements
 a one-dimensional version of Conway's Game of Life.  
 
 In this version, a living (green) cell will stay alive into the next generation if it has exactly one living neighbor.  If it has two living neighbors, it dies (red) of overcrowding. If it has no living neighbors, it dies of lonliness.
