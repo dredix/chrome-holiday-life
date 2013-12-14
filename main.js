@@ -104,6 +104,8 @@ function LifeGame(aHoliday) {
   this.calculateCells = calculateCells;
   this.moveCells = moveCells;
   this.step = step;
+  this.live = [ 0x00, 0xff, 0x00 ]
+  this.dead = [ 0xff, 0x00, 0x00 ]
 
   // Allocate storage for the array of cells
   this.currCells = new Uint8Array(this.numCells);
@@ -159,9 +161,9 @@ function LifeGame(aHoliday) {
     // Render the cells to a Holiday
     for (j=0; j < this.numCells; j++) {
       if (this.nextCells[j] == 1) {
-        this.holiday.setglobe(j, 0x80, 0xff, 0x00);     // Green for alive
+        this.holiday.setglobe(j, this.live[0], this.live[1], this.live[2]);     // Green for alive
       } else {
-        this.holiday.setglobe(j, 0x80, 0x90, 0x00);     // Red for dead
+        this.holiday.setglobe(j, this.dead[0], this.dead[1], this.dead[2]);     // Red for dead
       }
     }
     this.holiday.render();    // And render it out
