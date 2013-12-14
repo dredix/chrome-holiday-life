@@ -199,7 +199,7 @@ var game = null;
 function demoStart() {
   
   console.log("demoStart");
-  hol = new Holiday($('#address').val())
+  hol = new Holiday($('#selector').val())
   game = new LifeGame(hol);
   counter = setInterval(lifestep, 50); // run every 500 msec
   $('#thebutton').val('Stop');
@@ -264,6 +264,6 @@ $( document ).ready( function() {
       demoStop();
     }
     console.log(buttonState);
-    console.log($('#address').val())
+    console.log($('#selector').val())
   });
 });
